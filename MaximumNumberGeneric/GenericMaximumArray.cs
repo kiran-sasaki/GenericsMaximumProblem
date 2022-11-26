@@ -33,5 +33,11 @@ namespace MaximumNumberGeneric
             var Max = MaxValue(value);
             return Max;
         }
+        //Internally Calling MaxValue Method
+        public void PrintMaxValue()
+        {
+            var Max = MaxValue(this.value);
+            Console.WriteLine("Max value is: " + Max);
+        }
     }
 }
