@@ -14,9 +14,10 @@ namespace MaximumNumberGeneric
         {
             this.firstValue = firstValue;
             this.secondValue = secondValue;
-            this.thirdValue = thirdvalue;
+            this.thirdValue = thirdValue;
         }
-        public T MaxValue()
+        //Setting Parameters in Method For Finding Maximum Number
+        public static T MaxValue(T firstValue, T secondValue, T thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
                 firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
@@ -37,6 +38,12 @@ namespace MaximumNumberGeneric
                 return thirdValue;
             }
             return firstValue;
+        }
+        //Refactor 2
+        public T TestMaximum()
+        {
+            T max = GenericMaximum<T>.MaxValue(this.firstValue, this.secondValue, this.thirdValue);
+            return max;
         }
     }
 }
