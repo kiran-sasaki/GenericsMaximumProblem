@@ -9,32 +9,32 @@ namespace MaximumNumberGeneric
     //Creating GenericClass
     public class GenericMaximum<T> where T : IComparable
     {
-        private T firstValue, SecondValue, ThirdValue;
-        public GenericMaximum(T firstValue, T SecondValue, T Thirdvalue)
+        private T firstValue, secondValue, thirdValue;
+        public GenericMaximum(T firstValue, T secondValue, T thirdvalue)
         {
             this.firstValue = firstValue;
-            this.SecondValue = SecondValue;
-            this.ThirdValue = Thirdvalue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdvalue;
         }
         public T MaxValue()
         {
-            if (firstValue.CompareTo(SecondValue) > 0 && firstValue.CompareTo(ThirdValue) > 0 ||
-                firstValue.CompareTo(SecondValue) >= 0 && firstValue.CompareTo(ThirdValue) > 0 ||
-                firstValue.CompareTo(SecondValue) > 0 && firstValue.CompareTo(ThirdValue) >= 0)
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
+                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
+                firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
             {
                 return firstValue;
             }
-            if (SecondValue.CompareTo(firstValue) > 0 && SecondValue.CompareTo(ThirdValue) > 0 ||
-                SecondValue.CompareTo(firstValue) >= 0 && SecondValue.CompareTo(ThirdValue) > 0 ||
-                SecondValue.CompareTo(firstValue) > 0 && SecondValue.CompareTo(ThirdValue) >= 0)
+            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0 ||
+                secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) > 0 ||
+                secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) >= 0)
             {
-                return SecondValue;
+                return secondValue;
             }
-            if (ThirdValue.CompareTo(SecondValue) > 0 && ThirdValue.CompareTo(firstValue) > 0 ||
-              ThirdValue.CompareTo(SecondValue) >= 0 && ThirdValue.CompareTo(firstValue) > 0 ||
-             ThirdValue.CompareTo(SecondValue) > 0 && ThirdValue.CompareTo(firstValue) >= 0)
+            if (thirdValue.CompareTo(secondValue) > 0 && thirdValue.CompareTo(firstValue) > 0 ||
+              thirdValue.CompareTo(secondValue) >= 0 && thirdValue.CompareTo(firstValue) > 0 ||
+             thirdValue.CompareTo(secondValue) > 0 && thirdValue.CompareTo(firstValue) >= 0)
             {
-                return ThirdValue;
+                return thirdValue;
             }
             return firstValue;
         }
