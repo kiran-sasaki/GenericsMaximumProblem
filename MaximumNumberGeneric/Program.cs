@@ -4,16 +4,16 @@
     {
         public static void Main(string[] args)
         {
-            //Creating a object of GenericMaximumClass
-            //finding maximum of int number
-            GenericMaximum<int> maximum = new GenericMaximum<int>(45, 67, 57);
-            Console.WriteLine("The maximum No is " + maximum.TestMaximum());
-            //finding maximum of float number
-            GenericMaximum<double> doublemaximum = new GenericMaximum<double>(45.5, 76.9, 25.7);
-            Console.WriteLine("The maximum No is " + doublemaximum.TestMaximum());
-            //finding maximum of string
-            GenericMaximum<string> stringmaximum = new GenericMaximum<string>("Apple", "Peach", "Banana");
-            Console.WriteLine("The maximum No is " + stringmaximum.TestMaximum());
+            //Creating a object of GenericMaximumArray Class
+            int[] intarray = { 41, 43, 53, 25, 76 };
+            GenericMaximumArray<int> genericInt=new GenericMaximumArray<int>(intarray);
+            Console.WriteLine("The maximum No is " + genericInt.MaxMethod());
+            float[] floatarray = { 23.7f, 36.8f, 83.3f, 15.5f, 96.9f };
+            GenericMaximumArray<float> genericFloat = new GenericMaximumArray<float>(floatarray);
+            Console.WriteLine("The maximum No is " +genericFloat.MaxMethod());
+            string[] stringarray = { "Apple", "Peach", "Orange", "Pineapple"};
+            GenericMaximumArray<string> genericString = new GenericMaximumArray<string>(stringarray);
+            Console.WriteLine("The maximum No is " +genericString.MaxMethod()); 
         }
     }
 }
